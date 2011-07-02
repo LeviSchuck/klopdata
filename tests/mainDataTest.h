@@ -50,7 +50,6 @@ class mainDataTest : public CPPUNIT_NS::TestFixture {
     CPPUNIT_TEST(testIsUInt);
     CPPUNIT_TEST(testIsULInt);
     CPPUNIT_TEST(testReset);
-    CPPUNIT_TEST(testSetArrayType);
     CPPUNIT_TEST(testSize);
     CPPUNIT_TEST(testToAssoc);
     CPPUNIT_TEST(testToList);
@@ -105,7 +104,6 @@ private:
     void testIsUInt();
     void testIsULInt();
     void testReset();
-    void testSetArrayType();
     void testSize();
     void testToAssoc();
     void testToList();

@@ -1,0 +1,911 @@
+\hypertarget{classklop_1_1Data}{
+\section{klop::Data Class Reference}
+\label{classklop_1_1Data}\index{klop::Data@{klop::Data}}
+}
+
+
+\hyperlink{classklop_1_1Data}{Data} is a node based information storage class which should be easily dumped to a file, or created from a file.  
+
+
+
+
+{\ttfamily \#include $<$data.h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union {\bfseries numericalData}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std::map$<$ std::string, \hyperlink{classklop_1_1Data}{Data} $\ast$ $>$ \hyperlink{classklop_1_1Data_ab36e5c0e4f3265bb3e1698de7e073d03}{ObjectValues}
+\item 
+typedef std::map$<$ unsigned long int, \hyperlink{classklop_1_1Data}{Data} $\ast$ $>$ \hyperlink{classklop_1_1Data_aee446ab95da6d53fe52203d8ea967742}{ObjectList}
+\item 
+typedef ObjectList::iterator \hyperlink{classklop_1_1Data_a8bcb1ee1639616047953b2459319ea3c}{list\_\-iterator}
+\item 
+typedef ObjectValues::iterator \hyperlink{classklop_1_1Data_ae1c3cec24a9d3a5cd53693f5d34195f2}{map\_\-iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classklop_1_1Data_ad284df59897b5b49b9c79f114c65d49e}{Data} ()
+\item 
+\hyperlink{classklop_1_1Data_ac8d6b5827ea7d9513f9cd8371497fbaf}{Data} (const int)
+\item 
+\hyperlink{classklop_1_1Data_adda544dd3c4e4b399f2cc0486b84f29b}{Data} (const long int)
+\item 
+\hyperlink{classklop_1_1Data_aa72b4f5a0b7f68453f3e3d9a554313dd}{Data} (const unsigned int)
+\item 
+\hyperlink{classklop_1_1Data_ac6a6fd2aec08bda3e2ffdb7ef131ebd6}{Data} (const unsigned long int)
+\item 
+\hyperlink{classklop_1_1Data_a38de57cc4008c43eecb076f787580e94}{Data} (const double)
+\item 
+\hyperlink{classklop_1_1Data_ab3e35093d3e8305ea35c08a20ac97e46}{Data} (const bool)
+\item 
+\hyperlink{classklop_1_1Data_ac0fd9e3bc76841bf81f3a96e0f1265cf}{Data} (const char $\ast$)
+\item 
+\hyperlink{classklop_1_1Data_a9aeeaf9ca062b969cfaf98c4244eb94b}{Data} (const std::string \&val)
+\item 
+\hyperlink{classklop_1_1Data_a9b91dadcc3da66d6ee8e9d52d545f0a9}{Data} (const \hyperlink{classklop_1_1Data}{Data} \&data)
+\item 
+\hyperlink{classklop_1_1Data_af48f150441884eb51bfdfa8877e3a982}{Data} (const \hyperlink{classklop_1_1Data}{Data} $\ast$data)
+\item 
+const bool \hyperlink{classklop_1_1Data_abebdd948e987a87d05a2048c9a9d4447}{operator!} () const 
+\item 
+const bool \hyperlink{classklop_1_1Data_a9a26a45a336e5aa4fda427f4b6e63282}{operator$<$} (const \hyperlink{classklop_1_1Data}{Data} \&) const 
+\item 
+const bool \hyperlink{classklop_1_1Data_a7c154d4dcf5d63c8a54c267a0d51c2cc}{operator$<$=} (const \hyperlink{classklop_1_1Data}{Data} \&) const 
+\item 
+const bool \hyperlink{classklop_1_1Data_a855d8c8d79d9456cb2bbc512e2092548}{operator$>$=} (const \hyperlink{classklop_1_1Data}{Data} \&) const 
+\item 
+const bool \hyperlink{classklop_1_1Data_a765ddd7dde37b5370872b701e78f7001}{operator$>$} (const \hyperlink{classklop_1_1Data}{Data} \&) const 
+\item 
+const bool \hyperlink{classklop_1_1Data_ad28491b8ae14f330f0984a6858784282}{operator==} (const \hyperlink{classklop_1_1Data}{Data} \&) const 
+\item 
+const bool \hyperlink{classklop_1_1Data_a7ca19b70eca4aedd3c9f0fdebab8fd86}{operator!=} (const \hyperlink{classklop_1_1Data}{Data} \&that) const 
+\item 
+int \hyperlink{classklop_1_1Data_a48c0c9ec00a5e80be6133e3719a98f69}{compare} (const \hyperlink{classklop_1_1Data}{Data} $\ast$that) const 
+\begin{DoxyCompactList}\small\item\em compares this with that. \item\end{DoxyCompactList}\item 
+\hyperlink{classklop_1_1Data}{Data} \& \hyperlink{classklop_1_1Data_ab1dcb73c03a022536bea81909efd38a0}{operator\mbox{[}$\,$\mbox{]}} (unsigned long int index)
+\item 
+\hyperlink{classklop_1_1Data}{Data} \& \hyperlink{classklop_1_1Data_ad8528ee8db5d11a73c9217f111336431}{operator\mbox{[}$\,$\mbox{]}} (const std::string \&key)
+\item 
+const char $\ast$ \hyperlink{classklop_1_1Data_a80fbe109ee89d124f0e6e54cffaf3cec}{asCString} () const 
+\item 
+const std::string \hyperlink{classklop_1_1Data_a6c7a640bb2dff6835f191da35c476f8b}{asString} () const 
+\item 
+const int \hyperlink{classklop_1_1Data_a5069fdc536607f5c03e5c1ec4783adb5}{asInt} () const 
+\item 
+const long int \hyperlink{classklop_1_1Data_a6b4f0a7bd2944614906c2281272ee440}{asLInt} () const 
+\item 
+const unsigned int \hyperlink{classklop_1_1Data_abfea4bddc554b33099f4f47885531ceb}{asUInt} () const 
+\item 
+const unsigned long int \hyperlink{classklop_1_1Data_a40660fb1172e6ced42a434fdc37d8a18}{asULInt} () const 
+\item 
+const double \hyperlink{classklop_1_1Data_afd3558ce5f444beea44e33c2b50d87d0}{asDouble} () const 
+\item 
+bool \hyperlink{classklop_1_1Data_a6a16cf18018df26abaaeabd78e2929fa}{isNull} () const 
+\item 
+bool \hyperlink{classklop_1_1Data_affe7adc36ab32926e1446bc116054de8}{isBool} () const 
+\item 
+bool \hyperlink{classklop_1_1Data_a7f1f9ae1d7c12e3cc41cdd4c493c2086}{isInt} () const 
+\item 
+bool \hyperlink{classklop_1_1Data_a761ed85bf7b011406d5fed8625593824}{isUInt} () const 
+\item 
+bool \hyperlink{classklop_1_1Data_af6b277d0a14fff4cc7e548ed56885135}{isLInt} () const 
+\item 
+bool \hyperlink{classklop_1_1Data_ad61409548752c69c1ff582e986b4b997}{isULInt} () const 
+\item 
+bool \hyperlink{classklop_1_1Data_a4f940388ba62396a4cb695a799e0d5a0}{isString} () const 
+\item 
+bool \hyperlink{classklop_1_1Data_afc7d0518c0f02c9aa290bb64536c7350}{isData} () const 
+\item 
+bool \hyperlink{classklop_1_1Data_ab267b89e2607035d92d394e8fe60aac8}{isDouble} () const 
+\item 
+bool \hyperlink{classklop_1_1Data_a89224d45953494c69ada7702242e1477}{isNumeric} () const 
+\item 
+bool \hyperlink{classklop_1_1Data_a37c8b903f771f457db0ffb878afef8c4}{isMember} (const std::string) const 
+\item 
+bool \hyperlink{classklop_1_1Data_a8a49ddc37a5811dd90a6e09773d973da}{isMember} (unsigned long int index)
+\item 
+unsigned long int \hyperlink{classklop_1_1Data_a2ea33a6b2692b9685d590377d45e2061}{size} () const 
+\item 
+bool \hyperlink{classklop_1_1Data_a3653a0bee5cb788b21c53bc7d014880f}{isEmpty} () const 
+\item 
+void \hyperlink{classklop_1_1Data_abaf5103b2b56f0a0e48aa25a7b9b6b26}{clear} ()
+\item 
+const \hyperlink{namespaceklop_1_1kinds_acddfa6fd45450d8db3eb8c288d03202b}{kinds::DataType} \hyperlink{classklop_1_1Data_a9f7866240fddc473a08bd03c55ab0360}{dataType} () const 
+\item 
+const \hyperlink{namespaceklop_1_1kinds_aca835f7cfa300361cd67d6248b41ccd0}{kinds::ArrayType} \hyperlink{classklop_1_1Data_aa38d008dbf5d8060745c790d3506944b}{arrayType} () const 
+\item 
+void \hyperlink{classklop_1_1Data_a49da2dac32757f1133a51a405a281dd8}{reset} ()
+\item 
+void \hyperlink{classklop_1_1Data_a1c3a4138959e444d9a652154e6c87eb5}{addChild} (\hyperlink{classklop_1_1Data}{Data} $\ast$data)
+\item 
+void \hyperlink{classklop_1_1Data_a3be6fccd807dc2a26690a911224fe363}{addChild} (std::string key, \hyperlink{classklop_1_1Data}{Data} $\ast$data)
+\item 
+void \hyperlink{classklop_1_1Data_a27792112ac7e77d53adbdee018709f5a}{addChild} (char $\ast$key, \hyperlink{classklop_1_1Data}{Data} $\ast$data)
+\item 
+void \hyperlink{classklop_1_1Data_a4b5a9f41274ce996455123a8a708c6c5}{addChild} (const \hyperlink{classklop_1_1Data}{Data} \&data)
+\item 
+void \hyperlink{classklop_1_1Data_ada55852e13a3cff79b078bd8ee13d050}{addChild} (std::string, const \hyperlink{classklop_1_1Data}{Data} \&data)
+\item 
+void \hyperlink{classklop_1_1Data_ad88ef4807f08f54747a17618ae867c6e}{addChild} (char $\ast$, const \hyperlink{classklop_1_1Data}{Data} \&data)
+\item 
+void \hyperlink{classklop_1_1Data_ae7a3793820ae499d010cf7dafcea3a66}{toList} ()
+\item 
+void \hyperlink{classklop_1_1Data_a4a8acdc0100edfdaa90612ad1745c2ee}{toAssoc} ()
+\item 
+\hyperlink{classklop_1_1Data_a8bcb1ee1639616047953b2459319ea3c}{list\_\-iterator} \hyperlink{classklop_1_1Data_a1f315f65d1aa487da0d41ce7036013ed}{list\_\-begin} ()
+\item 
+\hyperlink{classklop_1_1Data_a8bcb1ee1639616047953b2459319ea3c}{list\_\-iterator} \hyperlink{classklop_1_1Data_af807d06d9aa338e2831b7cd1e254ea51}{list\_\-end} ()
+\item 
+\hyperlink{classklop_1_1Data_ae1c3cec24a9d3a5cd53693f5d34195f2}{map\_\-iterator} \hyperlink{classklop_1_1Data_aeb6daca6708978a23903d5200293b915}{map\_\-begin} ()
+\item 
+\hyperlink{classklop_1_1Data_ae1c3cec24a9d3a5cd53693f5d34195f2}{map\_\-iterator} \hyperlink{classklop_1_1Data_abfe383165bdecf91c2e88f766f62e1d1}{map\_\-end} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classklop_1_1Data}{Data} is a node based information storage class which should be easily dumped to a file, or created from a file. \hyperlink{classklop_1_1Data}{Data} is created to allow easy access to the information within by means of nodes. For example, you may access a data object by something like dataInstance\mbox{[}\char`\"{}key\char`\"{}\mbox{]}\mbox{[}\char`\"{}subkey\char`\"{}\mbox{]}\mbox{[}3\mbox{]}.\hyperlink{classklop_1_1Data_afd3558ce5f444beea44e33c2b50d87d0}{asDouble()}; Note that dataInstance\mbox{[}\char`\"{}key\char`\"{}\mbox{]} is a data object, which looks in its children for subkey, which then is a \hyperlink{classklop_1_1Data}{Data} object which holds its information klop::kinds::byIndex and retrieves the data it holds as a double(meaning it was originally numeric. This does not support taking a string and converting to a number. The opposite however is possible and is implemented. \begin{DoxyDate}{Date}
+June 2011 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Kloplop321 
+\end{DoxyAuthor}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classklop_1_1Data_a8bcb1ee1639616047953b2459319ea3c}{
+\index{klop::Data@{klop::Data}!list\_\-iterator@{list\_\-iterator}}
+\index{list\_\-iterator@{list\_\-iterator}!klop::Data@{klop::Data}}
+\subsubsection[{list\_\-iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef ObjectList::iterator {\bf klop::Data::list\_\-iterator}}}
+\label{classklop_1_1Data_a8bcb1ee1639616047953b2459319ea3c}
+\hyperlink{classklop_1_1Data_a8bcb1ee1639616047953b2459319ea3c}{Data::list\_\-iterator} is the type for the \hyperlink{classklop_1_1Data_aee446ab95da6d53fe52203d8ea967742}{Data::ObjectList} iterator \hypertarget{classklop_1_1Data_ae1c3cec24a9d3a5cd53693f5d34195f2}{
+\index{klop::Data@{klop::Data}!map\_\-iterator@{map\_\-iterator}}
+\index{map\_\-iterator@{map\_\-iterator}!klop::Data@{klop::Data}}
+\subsubsection[{map\_\-iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef ObjectValues::iterator {\bf klop::Data::map\_\-iterator}}}
+\label{classklop_1_1Data_ae1c3cec24a9d3a5cd53693f5d34195f2}
+\hyperlink{classklop_1_1Data_ae1c3cec24a9d3a5cd53693f5d34195f2}{Data::map\_\-iterator} is the type for the \hyperlink{classklop_1_1Data_ab36e5c0e4f3265bb3e1698de7e073d03}{Data::ObjectValues} iterator \hypertarget{classklop_1_1Data_aee446ab95da6d53fe52203d8ea967742}{
+\index{klop::Data@{klop::Data}!ObjectList@{ObjectList}}
+\index{ObjectList@{ObjectList}!klop::Data@{klop::Data}}
+\subsubsection[{ObjectList}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$unsigned long int, {\bf Data}$\ast$$>$ {\bf klop::Data::ObjectList}}}
+\label{classklop_1_1Data_aee446ab95da6d53fe52203d8ea967742}
+\hyperlink{classklop_1_1Data_aee446ab95da6d53fe52203d8ea967742}{Data::ObjectList} refers to an indexed array using a map \hypertarget{classklop_1_1Data_ab36e5c0e4f3265bb3e1698de7e073d03}{
+\index{klop::Data@{klop::Data}!ObjectValues@{ObjectValues}}
+\index{ObjectValues@{ObjectValues}!klop::Data@{klop::Data}}
+\subsubsection[{ObjectValues}]{\setlength{\rightskip}{0pt plus 5cm}typedef std::map$<$std::string, {\bf Data}$\ast$$>$ {\bf klop::Data::ObjectValues}}}
+\label{classklop_1_1Data_ab36e5c0e4f3265bb3e1698de7e073d03}
+\hyperlink{classklop_1_1Data_ab36e5c0e4f3265bb3e1698de7e073d03}{Data::ObjectValues} refers to an associative array using a map 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classklop_1_1Data_ad284df59897b5b49b9c79f114c65d49e}{
+\index{klop::Data@{klop::Data}!Data@{Data}}
+\index{Data@{Data}!klop::Data@{klop::Data}}
+\subsubsection[{Data}]{\setlength{\rightskip}{0pt plus 5cm}klop::Data::Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_ad284df59897b5b49b9c79f114c65d49e}
+Holds null data. Suggested to use this and then convert to an array type \hypertarget{classklop_1_1Data_ac8d6b5827ea7d9513f9cd8371497fbaf}{
+\index{klop::Data@{klop::Data}!Data@{Data}}
+\index{Data@{Data}!klop::Data@{klop::Data}}
+\subsubsection[{Data}]{\setlength{\rightskip}{0pt plus 5cm}klop::Data::Data (
+\begin{DoxyParamCaption}
+\item[{const int}]{ i}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_ac8d6b5827ea7d9513f9cd8371497fbaf}
+\hyperlink{classklop_1_1Data}{Data} can take normal integers \hypertarget{classklop_1_1Data_adda544dd3c4e4b399f2cc0486b84f29b}{
+\index{klop::Data@{klop::Data}!Data@{Data}}
+\index{Data@{Data}!klop::Data@{klop::Data}}
+\subsubsection[{Data}]{\setlength{\rightskip}{0pt plus 5cm}klop::Data::Data (
+\begin{DoxyParamCaption}
+\item[{const long int}]{ li}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_adda544dd3c4e4b399f2cc0486b84f29b}
+\hyperlink{classklop_1_1Data}{Data} can take long integers \hypertarget{classklop_1_1Data_aa72b4f5a0b7f68453f3e3d9a554313dd}{
+\index{klop::Data@{klop::Data}!Data@{Data}}
+\index{Data@{Data}!klop::Data@{klop::Data}}
+\subsubsection[{Data}]{\setlength{\rightskip}{0pt plus 5cm}klop::Data::Data (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{ ui}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_aa72b4f5a0b7f68453f3e3d9a554313dd}
+\hyperlink{classklop_1_1Data}{Data} can take unsigned integers \hypertarget{classklop_1_1Data_ac6a6fd2aec08bda3e2ffdb7ef131ebd6}{
+\index{klop::Data@{klop::Data}!Data@{Data}}
+\index{Data@{Data}!klop::Data@{klop::Data}}
+\subsubsection[{Data}]{\setlength{\rightskip}{0pt plus 5cm}klop::Data::Data (
+\begin{DoxyParamCaption}
+\item[{const unsigned long int}]{ uli}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_ac6a6fd2aec08bda3e2ffdb7ef131ebd6}
+\hyperlink{classklop_1_1Data}{Data} can take unsigned long integers \hypertarget{classklop_1_1Data_a38de57cc4008c43eecb076f787580e94}{
+\index{klop::Data@{klop::Data}!Data@{Data}}
+\index{Data@{Data}!klop::Data@{klop::Data}}
+\subsubsection[{Data}]{\setlength{\rightskip}{0pt plus 5cm}klop::Data::Data (
+\begin{DoxyParamCaption}
+\item[{const double}]{ d}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_a38de57cc4008c43eecb076f787580e94}
+\hyperlink{classklop_1_1Data}{Data} can take real numbers \hypertarget{classklop_1_1Data_ab3e35093d3e8305ea35c08a20ac97e46}{
+\index{klop::Data@{klop::Data}!Data@{Data}}
+\index{Data@{Data}!klop::Data@{klop::Data}}
+\subsubsection[{Data}]{\setlength{\rightskip}{0pt plus 5cm}klop::Data::Data (
+\begin{DoxyParamCaption}
+\item[{const bool}]{ b}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_ab3e35093d3e8305ea35c08a20ac97e46}
+\hyperlink{classklop_1_1Data}{Data} can hold boolean values \hypertarget{classklop_1_1Data_ac0fd9e3bc76841bf81f3a96e0f1265cf}{
+\index{klop::Data@{klop::Data}!Data@{Data}}
+\index{Data@{Data}!klop::Data@{klop::Data}}
+\subsubsection[{Data}]{\setlength{\rightskip}{0pt plus 5cm}klop::Data::Data (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ cstr}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_ac0fd9e3bc76841bf81f3a96e0f1265cf}
+\hyperlink{classklop_1_1Data}{Data} can hold c strings, though it is stored as a std::string \hypertarget{classklop_1_1Data_a9aeeaf9ca062b969cfaf98c4244eb94b}{
+\index{klop::Data@{klop::Data}!Data@{Data}}
+\index{Data@{Data}!klop::Data@{klop::Data}}
+\subsubsection[{Data}]{\setlength{\rightskip}{0pt plus 5cm}klop::Data::Data (
+\begin{DoxyParamCaption}
+\item[{const std::string \&}]{ val}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_a9aeeaf9ca062b969cfaf98c4244eb94b}
+\hyperlink{classklop_1_1Data}{Data} can hold normal strings \hypertarget{classklop_1_1Data_a9b91dadcc3da66d6ee8e9d52d545f0a9}{
+\index{klop::Data@{klop::Data}!Data@{Data}}
+\index{Data@{Data}!klop::Data@{klop::Data}}
+\subsubsection[{Data}]{\setlength{\rightskip}{0pt plus 5cm}klop::Data::Data (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{ data}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_a9b91dadcc3da66d6ee8e9d52d545f0a9}
+\hyperlink{classklop_1_1Data}{Data} can take another \hyperlink{classklop_1_1Data}{Data} object by reference and clone it, along with its children if it has any \hypertarget{classklop_1_1Data_af48f150441884eb51bfdfa8877e3a982}{
+\index{klop::Data@{klop::Data}!Data@{Data}}
+\index{Data@{Data}!klop::Data@{klop::Data}}
+\subsubsection[{Data}]{\setlength{\rightskip}{0pt plus 5cm}klop::Data::Data (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} $\ast$}]{ data}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_af48f150441884eb51bfdfa8877e3a982}
+\hyperlink{classklop_1_1Data}{Data} can take another \hyperlink{classklop_1_1Data}{Data} object by pointer and clone it, along with its children 
+
+\subsection{Member Function Documentation}
+\hypertarget{classklop_1_1Data_a1c3a4138959e444d9a652154e6c87eb5}{
+\index{klop::Data@{klop::Data}!addChild@{addChild}}
+\index{addChild@{addChild}!klop::Data@{klop::Data}}
+\subsubsection[{addChild}]{\setlength{\rightskip}{0pt plus 5cm}void klop::Data::addChild (
+\begin{DoxyParamCaption}
+\item[{{\bf Data} $\ast$}]{ data}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_a1c3a4138959e444d9a652154e6c87eb5}
+Adds a child if the \hyperlink{classklop_1_1Data}{Data} is set to a list.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em data}]the child to add \end{DoxyParams}
+\begin{DoxyNote}{Note}
+Will have an assertion failure if this is not set to list mode. 
+\end{DoxyNote}
+\hypertarget{classklop_1_1Data_a3be6fccd807dc2a26690a911224fe363}{
+\index{klop::Data@{klop::Data}!addChild@{addChild}}
+\index{addChild@{addChild}!klop::Data@{klop::Data}}
+\subsubsection[{addChild}]{\setlength{\rightskip}{0pt plus 5cm}void klop::Data::addChild (
+\begin{DoxyParamCaption}
+\item[{std::string}]{ key, }
+\item[{{\bf Data} $\ast$}]{ data}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_a3be6fccd807dc2a26690a911224fe363}
+Adds a child to the \hyperlink{classklop_1_1Data}{Data} if it is set to an Associative array
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em key}]the key by which it can later be retrieved by \item[{\em data}]The child to add \end{DoxyParams}
+\begin{DoxyNote}{Note}
+Will have an assertion failure if it is not set to an associative mode 
+\end{DoxyNote}
+\hypertarget{classklop_1_1Data_a27792112ac7e77d53adbdee018709f5a}{
+\index{klop::Data@{klop::Data}!addChild@{addChild}}
+\index{addChild@{addChild}!klop::Data@{klop::Data}}
+\subsubsection[{addChild}]{\setlength{\rightskip}{0pt plus 5cm}void klop::Data::addChild (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{ key, }
+\item[{{\bf Data} $\ast$}]{ data}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_a27792112ac7e77d53adbdee018709f5a}
+Adds a child to the \hyperlink{classklop_1_1Data}{Data} if it is set to an Associative array
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em key}]the key by which it can later be retrieved by \item[{\em data}]The child to add \end{DoxyParams}
+\begin{DoxyNote}{Note}
+Will have an assertion failure if it is not set to an associative mode 
+\end{DoxyNote}
+\hypertarget{classklop_1_1Data_a4b5a9f41274ce996455123a8a708c6c5}{
+\index{klop::Data@{klop::Data}!addChild@{addChild}}
+\index{addChild@{addChild}!klop::Data@{klop::Data}}
+\subsubsection[{addChild}]{\setlength{\rightskip}{0pt plus 5cm}void klop::Data::addChild (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{ data}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_a4b5a9f41274ce996455123a8a708c6c5}
+Adds a child if the \hyperlink{classklop_1_1Data}{Data} is set to a list.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em data}]the child to add \end{DoxyParams}
+\begin{DoxyNote}{Note}
+Will have an assertion failure if this is not set to list mode. 
+\end{DoxyNote}
+\hypertarget{classklop_1_1Data_ada55852e13a3cff79b078bd8ee13d050}{
+\index{klop::Data@{klop::Data}!addChild@{addChild}}
+\index{addChild@{addChild}!klop::Data@{klop::Data}}
+\subsubsection[{addChild}]{\setlength{\rightskip}{0pt plus 5cm}void klop::Data::addChild (
+\begin{DoxyParamCaption}
+\item[{std::string}]{ key, }
+\item[{const {\bf Data} \&}]{ data}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_ada55852e13a3cff79b078bd8ee13d050}
+Adds a child to the \hyperlink{classklop_1_1Data}{Data} if it is set to an Associative array
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em key}]the key by which it can later be retrieved by \item[{\em data}]The child to add \end{DoxyParams}
+\begin{DoxyNote}{Note}
+Will have an assertion failure if it is not set to an associative mode 
+\end{DoxyNote}
+\hypertarget{classklop_1_1Data_ad88ef4807f08f54747a17618ae867c6e}{
+\index{klop::Data@{klop::Data}!addChild@{addChild}}
+\index{addChild@{addChild}!klop::Data@{klop::Data}}
+\subsubsection[{addChild}]{\setlength{\rightskip}{0pt plus 5cm}void klop::Data::addChild (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{ key, }
+\item[{const {\bf Data} \&}]{ data}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_ad88ef4807f08f54747a17618ae867c6e}
+Adds a child to the \hyperlink{classklop_1_1Data}{Data} if it is set to an Associative array
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em key}]the key by which it can later be retrieved by \item[{\em data}]The child to add \end{DoxyParams}
+\begin{DoxyNote}{Note}
+Will have an assertion failure if it is not set to an associative mode 
+\end{DoxyNote}
+\hypertarget{classklop_1_1Data_aa38d008dbf5d8060745c790d3506944b}{
+\index{klop::Data@{klop::Data}!arrayType@{arrayType}}
+\index{arrayType@{arrayType}!klop::Data@{klop::Data}}
+\subsubsection[{arrayType}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf kinds::ArrayType} klop::Data::arrayType (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_aa38d008dbf5d8060745c790d3506944b}
+\begin{DoxyReturn}{Returns}
+\hyperlink{namespaceklop_1_1kinds_aca835f7cfa300361cd67d6248b41ccd0}{kinds::ArrayType} type of array, associative or indexed Results are kinds::byNothing, kinds::byAssociation, kinds::byIndex 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_a80fbe109ee89d124f0e6e54cffaf3cec}{
+\index{klop::Data@{klop::Data}!asCString@{asCString}}
+\index{asCString@{asCString}!klop::Data@{klop::Data}}
+\subsubsection[{asCString}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ klop::Data::asCString (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_a80fbe109ee89d124f0e6e54cffaf3cec}
+This function provides the value represented as a string.
+
+\begin{DoxyReturn}{Returns}
+char$\ast$ C String, which is basically the \hyperlink{classklop_1_1Data_a6c7a640bb2dff6835f191da35c476f8b}{Data::asString()} .c\_\-str(); 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_afd3558ce5f444beea44e33c2b50d87d0}{
+\index{klop::Data@{klop::Data}!asDouble@{asDouble}}
+\index{asDouble@{asDouble}!klop::Data@{klop::Data}}
+\subsubsection[{asDouble}]{\setlength{\rightskip}{0pt plus 5cm}const double klop::Data::asDouble (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_afd3558ce5f444beea44e33c2b50d87d0}
+This function will try to return an double value if the data is numeric.
+
+\begin{DoxyNote}{Note}
+This will cause an assertion failure if the data is not numeric.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+double value of \hyperlink{classklop_1_1Data}{Data} 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_a5069fdc536607f5c03e5c1ec4783adb5}{
+\index{klop::Data@{klop::Data}!asInt@{asInt}}
+\index{asInt@{asInt}!klop::Data@{klop::Data}}
+\subsubsection[{asInt}]{\setlength{\rightskip}{0pt plus 5cm}const int klop::Data::asInt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_a5069fdc536607f5c03e5c1ec4783adb5}
+This function will try to return an int value if the data is numeric.
+
+\begin{DoxyNote}{Note}
+This will cause an assertion failure if the data is not numeric.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+int value of \hyperlink{classklop_1_1Data}{Data} 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_a6b4f0a7bd2944614906c2281272ee440}{
+\index{klop::Data@{klop::Data}!asLInt@{asLInt}}
+\index{asLInt@{asLInt}!klop::Data@{klop::Data}}
+\subsubsection[{asLInt}]{\setlength{\rightskip}{0pt plus 5cm}const long int klop::Data::asLInt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_a6b4f0a7bd2944614906c2281272ee440}
+This function will try to return a long int value if the data is numeric.
+
+\begin{DoxyNote}{Note}
+This will cause an assertion failure if the data is not numeric.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+long int value of \hyperlink{classklop_1_1Data}{Data} 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_a6c7a640bb2dff6835f191da35c476f8b}{
+\index{klop::Data@{klop::Data}!asString@{asString}}
+\index{asString@{asString}!klop::Data@{klop::Data}}
+\subsubsection[{asString}]{\setlength{\rightskip}{0pt plus 5cm}const std::string klop::Data::asString (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_a6c7a640bb2dff6835f191da35c476f8b}
+This function provides the value represented as a string.
+
+\begin{DoxyReturn}{Returns}
+std::string The data represented as a string. Will return \mbox{[}NULL\mbox{]} when null data is within. Will return \mbox{[}DATA\mbox{]} when it is just an array of data Will return the number as a string, thanks to std::stringstream Will return the string data as normal 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_abfea4bddc554b33099f4f47885531ceb}{
+\index{klop::Data@{klop::Data}!asUInt@{asUInt}}
+\index{asUInt@{asUInt}!klop::Data@{klop::Data}}
+\subsubsection[{asUInt}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int klop::Data::asUInt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_abfea4bddc554b33099f4f47885531ceb}
+This function will try to return an unsigned int value if the data is numeric.
+
+\begin{DoxyNote}{Note}
+This will cause an assertion failure if the data is not numeric.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+unsigned int value of \hyperlink{classklop_1_1Data}{Data} 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_a40660fb1172e6ced42a434fdc37d8a18}{
+\index{klop::Data@{klop::Data}!asULInt@{asULInt}}
+\index{asULInt@{asULInt}!klop::Data@{klop::Data}}
+\subsubsection[{asULInt}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned long int klop::Data::asULInt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_a40660fb1172e6ced42a434fdc37d8a18}
+This function will try to return an unsigned long int value if the data is numeric.
+
+\begin{DoxyNote}{Note}
+This will cause an assertion failure if the data is not numeric.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+unsigned long int value of \hyperlink{classklop_1_1Data}{Data} 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_abaf5103b2b56f0a0e48aa25a7b9b6b26}{
+\index{klop::Data@{klop::Data}!clear@{clear}}
+\index{clear@{clear}!klop::Data@{klop::Data}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void klop::Data::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_abaf5103b2b56f0a0e48aa25a7b9b6b26}
+This function cleanly removes all items in the \hyperlink{classklop_1_1Data}{Data} tree and subtrees \hypertarget{classklop_1_1Data_a48c0c9ec00a5e80be6133e3719a98f69}{
+\index{klop::Data@{klop::Data}!compare@{compare}}
+\index{compare@{compare}!klop::Data@{klop::Data}}
+\subsubsection[{compare}]{\setlength{\rightskip}{0pt plus 5cm}int klop::Data::compare (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} $\ast$}]{ that}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_a48c0c9ec00a5e80be6133e3719a98f69}
+
+
+compares this with that. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em that}]The other \hyperlink{classklop_1_1Data}{Data} object to compare to. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an int that specifies the distance from this \hyperlink{classklop_1_1Data}{Data} to the parameter. \hyperlink{classklop_1_1Data_a48c0c9ec00a5e80be6133e3719a98f69}{Data::compare} checks the differences between this value, and the parameter's value, if they are moreData, we don't have a means to currently compare, so it returns -\/1. The same for nullData. 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_a9f7866240fddc473a08bd03c55ab0360}{
+\index{klop::Data@{klop::Data}!dataType@{dataType}}
+\index{dataType@{dataType}!klop::Data@{klop::Data}}
+\subsubsection[{dataType}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf kinds::DataType} klop::Data::dataType (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_a9f7866240fddc473a08bd03c55ab0360}
+\begin{DoxyReturn}{Returns}
+\hyperlink{namespaceklop_1_1kinds_acddfa6fd45450d8db3eb8c288d03202b}{kinds::DataType} what type this \hyperlink{classklop_1_1Data}{Data} is. Example: nullData, stringData, etc. 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_affe7adc36ab32926e1446bc116054de8}{
+\index{klop::Data@{klop::Data}!isBool@{isBool}}
+\index{isBool@{isBool}!klop::Data@{klop::Data}}
+\subsubsection[{isBool}]{\setlength{\rightskip}{0pt plus 5cm}bool klop::Data::isBool (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_affe7adc36ab32926e1446bc116054de8}
+\begin{DoxyReturn}{Returns}
+bool is this dataType boolData? 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_afc7d0518c0f02c9aa290bb64536c7350}{
+\index{klop::Data@{klop::Data}!isData@{isData}}
+\index{isData@{isData}!klop::Data@{klop::Data}}
+\subsubsection[{isData}]{\setlength{\rightskip}{0pt plus 5cm}bool klop::Data::isData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_afc7d0518c0f02c9aa290bb64536c7350}
+\begin{DoxyReturn}{Returns}
+bool is this dataType moreData? 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_ab267b89e2607035d92d394e8fe60aac8}{
+\index{klop::Data@{klop::Data}!isDouble@{isDouble}}
+\index{isDouble@{isDouble}!klop::Data@{klop::Data}}
+\subsubsection[{isDouble}]{\setlength{\rightskip}{0pt plus 5cm}bool klop::Data::isDouble (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_ab267b89e2607035d92d394e8fe60aac8}
+\begin{DoxyReturn}{Returns}
+bool is this dataType doubleData? 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_a3653a0bee5cb788b21c53bc7d014880f}{
+\index{klop::Data@{klop::Data}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!klop::Data@{klop::Data}}
+\subsubsection[{isEmpty}]{\setlength{\rightskip}{0pt plus 5cm}bool klop::Data::isEmpty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_a3653a0bee5cb788b21c53bc7d014880f}
+\begin{DoxyReturn}{Returns}
+bool is the size 0 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_a7f1f9ae1d7c12e3cc41cdd4c493c2086}{
+\index{klop::Data@{klop::Data}!isInt@{isInt}}
+\index{isInt@{isInt}!klop::Data@{klop::Data}}
+\subsubsection[{isInt}]{\setlength{\rightskip}{0pt plus 5cm}bool klop::Data::isInt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_a7f1f9ae1d7c12e3cc41cdd4c493c2086}
+\begin{DoxyReturn}{Returns}
+bool is this dataType intData? 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_af6b277d0a14fff4cc7e548ed56885135}{
+\index{klop::Data@{klop::Data}!isLInt@{isLInt}}
+\index{isLInt@{isLInt}!klop::Data@{klop::Data}}
+\subsubsection[{isLInt}]{\setlength{\rightskip}{0pt plus 5cm}bool klop::Data::isLInt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_af6b277d0a14fff4cc7e548ed56885135}
+\begin{DoxyReturn}{Returns}
+bool is this dataType lintData? 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_a8a49ddc37a5811dd90a6e09773d973da}{
+\index{klop::Data@{klop::Data}!isMember@{isMember}}
+\index{isMember@{isMember}!klop::Data@{klop::Data}}
+\subsubsection[{isMember}]{\setlength{\rightskip}{0pt plus 5cm}bool klop::Data::isMember (
+\begin{DoxyParamCaption}
+\item[{unsigned long int}]{ index}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_a8a49ddc37a5811dd90a6e09773d973da}
+\begin{DoxyReturn}{Returns}
+bool does this\mbox{[}index\mbox{]} exist? 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_a37c8b903f771f457db0ffb878afef8c4}{
+\index{klop::Data@{klop::Data}!isMember@{isMember}}
+\index{isMember@{isMember}!klop::Data@{klop::Data}}
+\subsubsection[{isMember}]{\setlength{\rightskip}{0pt plus 5cm}bool klop::Data::isMember (
+\begin{DoxyParamCaption}
+\item[{const std::string}]{ key}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_a37c8b903f771f457db0ffb878afef8c4}
+\begin{DoxyReturn}{Returns}
+bool does this\mbox{[}parameter\mbox{]} exist? 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_a6a16cf18018df26abaaeabd78e2929fa}{
+\index{klop::Data@{klop::Data}!isNull@{isNull}}
+\index{isNull@{isNull}!klop::Data@{klop::Data}}
+\subsubsection[{isNull}]{\setlength{\rightskip}{0pt plus 5cm}bool klop::Data::isNull (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_a6a16cf18018df26abaaeabd78e2929fa}
+\begin{DoxyReturn}{Returns}
+bool is this dataType nullData? 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_a89224d45953494c69ada7702242e1477}{
+\index{klop::Data@{klop::Data}!isNumeric@{isNumeric}}
+\index{isNumeric@{isNumeric}!klop::Data@{klop::Data}}
+\subsubsection[{isNumeric}]{\setlength{\rightskip}{0pt plus 5cm}bool klop::Data::isNumeric (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_a89224d45953494c69ada7702242e1477}
+\begin{DoxyReturn}{Returns}
+bool is this dataType numerical? Will return true if intData, uintData, lintData, ulintData, or doubleData 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_a4f940388ba62396a4cb695a799e0d5a0}{
+\index{klop::Data@{klop::Data}!isString@{isString}}
+\index{isString@{isString}!klop::Data@{klop::Data}}
+\subsubsection[{isString}]{\setlength{\rightskip}{0pt plus 5cm}bool klop::Data::isString (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_a4f940388ba62396a4cb695a799e0d5a0}
+\begin{DoxyReturn}{Returns}
+bool is this dataType stringData? 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_a761ed85bf7b011406d5fed8625593824}{
+\index{klop::Data@{klop::Data}!isUInt@{isUInt}}
+\index{isUInt@{isUInt}!klop::Data@{klop::Data}}
+\subsubsection[{isUInt}]{\setlength{\rightskip}{0pt plus 5cm}bool klop::Data::isUInt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_a761ed85bf7b011406d5fed8625593824}
+\begin{DoxyReturn}{Returns}
+bool is this dataType uintData? 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_ad61409548752c69c1ff582e986b4b997}{
+\index{klop::Data@{klop::Data}!isULInt@{isULInt}}
+\index{isULInt@{isULInt}!klop::Data@{klop::Data}}
+\subsubsection[{isULInt}]{\setlength{\rightskip}{0pt plus 5cm}bool klop::Data::isULInt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_ad61409548752c69c1ff582e986b4b997}
+\begin{DoxyReturn}{Returns}
+bool is this dataType ulintData? 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_a1f315f65d1aa487da0d41ce7036013ed}{
+\index{klop::Data@{klop::Data}!list\_\-begin@{list\_\-begin}}
+\index{list\_\-begin@{list\_\-begin}!klop::Data@{klop::Data}}
+\subsubsection[{list\_\-begin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Data::list\_\-iterator} klop::Data::list\_\-begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_a1f315f65d1aa487da0d41ce7036013ed}
+\begin{DoxyReturn}{Returns}
+a list\_\-iterator so that you can sorta use STL style incrementing 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_af807d06d9aa338e2831b7cd1e254ea51}{
+\index{klop::Data@{klop::Data}!list\_\-end@{list\_\-end}}
+\index{list\_\-end@{list\_\-end}!klop::Data@{klop::Data}}
+\subsubsection[{list\_\-end}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Data::list\_\-iterator} klop::Data::list\_\-end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_af807d06d9aa338e2831b7cd1e254ea51}
+\begin{DoxyReturn}{Returns}
+a list\_\-iterator so that you can sorta use STL style incrementing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This is the end. I don't know why, but you can only do !=, not $<$= list end. 
+\end{DoxyNote}
+\hypertarget{classklop_1_1Data_aeb6daca6708978a23903d5200293b915}{
+\index{klop::Data@{klop::Data}!map\_\-begin@{map\_\-begin}}
+\index{map\_\-begin@{map\_\-begin}!klop::Data@{klop::Data}}
+\subsubsection[{map\_\-begin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Data::map\_\-iterator} klop::Data::map\_\-begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_aeb6daca6708978a23903d5200293b915}
+\begin{DoxyReturn}{Returns}
+a map\_\-iterator so that you can sorta use STL style incrementing 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_abfe383165bdecf91c2e88f766f62e1d1}{
+\index{klop::Data@{klop::Data}!map\_\-end@{map\_\-end}}
+\index{map\_\-end@{map\_\-end}!klop::Data@{klop::Data}}
+\subsubsection[{map\_\-end}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Data::map\_\-iterator} klop::Data::map\_\-end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_abfe383165bdecf91c2e88f766f62e1d1}
+\begin{DoxyReturn}{Returns}
+a map\_\-iterator so that you can sorta use STL style incrementing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This is the end. I don't know why, but you can only do !=, not $<$= map end. 
+\end{DoxyNote}
+\hypertarget{classklop_1_1Data_abebdd948e987a87d05a2048c9a9d4447}{
+\index{klop::Data@{klop::Data}!operator!@{operator!}}
+\index{operator!@{operator!}!klop::Data@{klop::Data}}
+\subsubsection[{operator!}]{\setlength{\rightskip}{0pt plus 5cm}const bool klop::Data::operator! (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_abebdd948e987a87d05a2048c9a9d4447}
+This returns true when the data within is not kinds::nullData \hypertarget{classklop_1_1Data_a7ca19b70eca4aedd3c9f0fdebab8fd86}{
+\index{klop::Data@{klop::Data}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!klop::Data@{klop::Data}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}const bool klop::Data::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{ that}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_a7ca19b70eca4aedd3c9f0fdebab8fd86}
+This compares numerical and strings, It also checks if the pointers are different \hypertarget{classklop_1_1Data_a9a26a45a336e5aa4fda427f4b6e63282}{
+\index{klop::Data@{klop::Data}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!klop::Data@{klop::Data}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}const bool klop::Data::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{ data}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_a9a26a45a336e5aa4fda427f4b6e63282}
+This compares only numerical and string kinds::dataType. \hypertarget{classklop_1_1Data_a7c154d4dcf5d63c8a54c267a0d51c2cc}{
+\index{klop::Data@{klop::Data}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!klop::Data@{klop::Data}}
+\subsubsection[{operator$<$=}]{\setlength{\rightskip}{0pt plus 5cm}const bool klop::Data::operator$<$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{ data}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_a7c154d4dcf5d63c8a54c267a0d51c2cc}
+This compares only numerical and string kinds::dataType. \hypertarget{classklop_1_1Data_ad28491b8ae14f330f0984a6858784282}{
+\index{klop::Data@{klop::Data}!operator==@{operator==}}
+\index{operator==@{operator==}!klop::Data@{klop::Data}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}const bool klop::Data::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{ data}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_ad28491b8ae14f330f0984a6858784282}
+This compares numerical and strings, It also checks if the pointers are the same \hypertarget{classklop_1_1Data_a765ddd7dde37b5370872b701e78f7001}{
+\index{klop::Data@{klop::Data}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!klop::Data@{klop::Data}}
+\subsubsection[{operator$>$}]{\setlength{\rightskip}{0pt plus 5cm}const bool klop::Data::operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{ data}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_a765ddd7dde37b5370872b701e78f7001}
+This compares only numerical and string kinds::dataType. \hypertarget{classklop_1_1Data_a855d8c8d79d9456cb2bbc512e2092548}{
+\index{klop::Data@{klop::Data}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!klop::Data@{klop::Data}}
+\subsubsection[{operator$>$=}]{\setlength{\rightskip}{0pt plus 5cm}const bool klop::Data::operator$>$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{ data}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_a855d8c8d79d9456cb2bbc512e2092548}
+This compares only numerical and string kinds::dataType. \hypertarget{classklop_1_1Data_ab1dcb73c03a022536bea81909efd38a0}{
+\index{klop::Data@{klop::Data}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!klop::Data@{klop::Data}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Data} \& klop::Data::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{unsigned long int}]{ index}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_ab1dcb73c03a022536bea81909efd38a0}
+Example of what the int index would be used for 
+\begin{DoxyCode}
+ <list id="happy">
+      <item>blah</item>
+      <item>another</item>
+ </list>
+\end{DoxyCode}
+ This does not necessarily mean duplication, but multiple entries. so, it would be accessed like root\mbox{[}\char`\"{}happy\char`\"{}\mbox{]}\mbox{[}0\mbox{]} for blah. \hypertarget{classklop_1_1Data_ad8528ee8db5d11a73c9217f111336431}{
+\index{klop::Data@{klop::Data}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!klop::Data@{klop::Data}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Data} \& klop::Data::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{const std::string \&}]{ key}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_ad8528ee8db5d11a73c9217f111336431}
+Example of what the string key would be used for 
+\begin{DoxyCode}
+ <physics>
+      <mass type="float">40.0</mass>
+ </physics>
+\end{DoxyCode}
+ So you would access this like root\mbox{[}\char`\"{}physics\char`\"{}\mbox{]}\mbox{[}\char`\"{}mass\char`\"{}\mbox{]}.\hyperlink{classklop_1_1Data_afd3558ce5f444beea44e33c2b50d87d0}{asDouble()}; \hypertarget{classklop_1_1Data_a49da2dac32757f1133a51a405a281dd8}{
+\index{klop::Data@{klop::Data}!reset@{reset}}
+\index{reset@{reset}!klop::Data@{klop::Data}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void klop::Data::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_a49da2dac32757f1133a51a405a281dd8}
+This function will reset the entire \hyperlink{classklop_1_1Data}{Data} structure. It will then be set to nullData \hypertarget{classklop_1_1Data_a2ea33a6b2692b9685d590377d45e2061}{
+\index{klop::Data@{klop::Data}!size@{size}}
+\index{size@{size}!klop::Data@{klop::Data}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long int klop::Data::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}
+\label{classklop_1_1Data_a2ea33a6b2692b9685d590377d45e2061}
+\begin{DoxyReturn}{Returns}
+unsigned long int how many items are in the array 
+\end{DoxyReturn}
+\hypertarget{classklop_1_1Data_a4a8acdc0100edfdaa90612ad1745c2ee}{
+\index{klop::Data@{klop::Data}!toAssoc@{toAssoc}}
+\index{toAssoc@{toAssoc}!klop::Data@{klop::Data}}
+\subsubsection[{toAssoc}]{\setlength{\rightskip}{0pt plus 5cm}void klop::Data::toAssoc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_a4a8acdc0100edfdaa90612ad1745c2ee}
+Converts this data structure to an associative array. It will reset the data if any exist. \begin{DoxyNote}{Note}
+if it is already a list, then this will do nothing. You must use clear if you wish to have a clean list. 
+\end{DoxyNote}
+\hypertarget{classklop_1_1Data_ae7a3793820ae499d010cf7dafcea3a66}{
+\index{klop::Data@{klop::Data}!toList@{toList}}
+\index{toList@{toList}!klop::Data@{klop::Data}}
+\subsubsection[{toList}]{\setlength{\rightskip}{0pt plus 5cm}void klop::Data::toList (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classklop_1_1Data_ae7a3793820ae499d010cf7dafcea3a66}
+Converts this data structure to a List. It will reset the data if any other kinds exist, such as kinds::stringData. \begin{DoxyNote}{Note}
+if it is already a list, then this will do nothing. You must use clear if you wish to have a clean list. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{data_8h}{data.h}\item 
+data.cpp\end{DoxyCompactItemize}

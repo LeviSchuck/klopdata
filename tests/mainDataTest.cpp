@@ -215,7 +215,7 @@ void mainDataTest::testAddChild4() {
 
 void mainDataTest::testArrayType() {
     klop::Data data = klop::Data();
-    data.setArrayType(klop::kinds::byIndex);
+    data.toList();
     klop::kinds::ArrayType result = data.arrayType();
     if(result == klop::kinds::byIndex) {
         CPPUNIT_ASSERT(true);
@@ -237,21 +237,30 @@ void mainDataTest::testAsCString() {
 void mainDataTest::testAsDouble() {
     klop::Data data(3.20f);
     const double result = data.asDouble();
-    if(result == 3.2f) {
-        CPPUNIT_ASSERT(true);
-    }else{
-        CPPUNIT_ASSERT(false);
-    }
+    CPPUNIT_ASSERT(result == 3.2f);
+    data = klop::Data((int)3);
+    CPPUNIT_ASSERT(data.asDouble() == 3.f);
+    data = klop::Data((long int)3);
+    CPPUNIT_ASSERT(data.asDouble() == 3.f);
+    data = klop::Data((unsigned int)3);
+    CPPUNIT_ASSERT(data.asDouble() == 3.f);
+    data = klop::Data((unsigned long int)3);
+    CPPUNIT_ASSERT(data.asDouble() == 3.f);
 }
 
 void mainDataTest::testAsInt() {
-    klop::Data data(3);
+    const int desired = 3;
+    klop::Data data(desired);
     const int result = data.asInt();
-    if(result == 3) {
-        CPPUNIT_ASSERT(true);
-    }else{
-        CPPUNIT_ASSERT(false);
-    }
+    CPPUNIT_ASSERT(result == desired);
+    data = klop::Data((unsigned int) desired);
+    CPPUNIT_ASSERT(data.asInt() == desired);
+    data = klop::Data((long int) desired);
+    CPPUNIT_ASSERT(data.asInt() == desired);
+    data = klop::Data((unsigned long int) desired);
+    CPPUNIT_ASSERT(data.asInt() == desired);
+    data = klop::Data((double) desired);
+    CPPUNIT_ASSERT(data.asInt() == desired);
 }
 
 void mainDataTest::testAsLInt() {
@@ -429,17 +438,6 @@ void mainDataTest::testReset() {
     CPPUNIT_ASSERT(data.isNull() && data.size() == 0);
 }
 
-void mainDataTest::testSetArrayType() {
-    klop::kinds::ArrayType p0 = klop::kinds::byAssociation;
-    klop::Data data;
-    data.setArrayType(p0);
-    if(data.arrayType() == klop::kinds::byAssociation) {
-        CPPUNIT_ASSERT(true);
-    }else{
-        CPPUNIT_ASSERT(false);
-    }
-}
-
 void mainDataTest::testSize() {
     klop::Data data;
     klop::Data* data2 = new klop::Data(40938);
@@ -479,7 +477,8 @@ void mainDataTest::testOperators(){
     CPPUNIT_ASSERT(data.size() == 3);
     data.reset();
     data.toAssoc();
-    //By reseting, all the pointers are freed, so we must recreate our reference data.
+    //By reseting, all the pointers are freed, so we must recreate our reference
+    //data.
     data2 = new klop::Data(3);
     data3 = new klop::Data("Eggs");
     data4 = new klop::Data(3.14159);
@@ -528,6 +527,9 @@ void mainDataTest::testIterators(){
         CPPUNIT_ASSERT(it->second->asInt() == x);
         x++;
     }
+    unsigned long int y = data.size();
+    data.addChild(klop::Data(42));
+    CPPUNIT_ASSERT(y +1 == data.size());
 }
 void mainDataTest::testIterators2(){
     //This tests the map iterator.
@@ -536,7 +538,8 @@ void mainDataTest::testIterators2(){
     klop::Data data2(4);
     klop::Data data3(5);
     klop::Data data4(6);
-    std::string names[] = { "Erg","Org","Urg"};//maps ordered in alphabetical Red black.
+    std::string names[] = { "Erg","Org","Urg"};//maps ordered in alphabetical 
+    //Red black.
     data.addChild(names[0],data2);
     data.addChild(names[1],data3);
     data.addChild(names[2],data4);
@@ -550,4 +553,5 @@ void mainDataTest::testIterators2(){
     }
     
     CPPUNIT_ASSERT(y == names->length());
+    
 }

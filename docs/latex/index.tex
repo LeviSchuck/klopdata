@@ -1,0 +1,41 @@
+\hypertarget{index_usage}{}\section{Basic Usage}\label{index_usage}
+In order to use this static library, you need to compile first using make. You may also include the sources directly into your project and use them that way. \hypertarget{index_basic_info}{}\subsection{Information}\label{index_basic_info}
+In order to use the data class, you need to ensure that your compilation creates a data.o or data.obj, depending on your setup. Next, to use it in your code, you need to include the \hyperlink{data_8h}{data.h} included. The data class does NOT depend on external libraries.\hypertarget{index_syntax_example}{}\subsection{Example}\label{index_syntax_example}
+Using a list: 
+\begin{DoxyCode}
+ klop::Data data;//Note: Do not use () if you plan to init with null data
+ data.toList();
+ data.addChild(klop::Data(42));
+ printf("Forty Two is %d\n",data[0].asInt());
+\end{DoxyCode}
+ Using keys 
+\begin{DoxyCode}
+ klop::Data data;//Note: Do not use () if you plan to init with null data
+ data.toAssoc();
+ data.addChild("F2",klop::Data(42));
+ printf("Forty Two is %d\n",data["F2"].asInt());
+\end{DoxyCode}
+ Compounding nodes 
+\begin{DoxyCode}
+ klop::Data data;//Note: Do not use () if you plan to init with null data
+ data.toAssoc();
+ klop::Data data2;
+ data2.toList();
+ data2.addChild(klop::Data(42));
+ data2.addChild(klop::Data("Forty Two as well"));
+ data.addChild("F2",data2);
+ printf("Forty Two is %d\n",data["F2"][0].asInt());
+ printf("Forty Two is %s\n",data["F2"][1].asString());
+\end{DoxyCode}
+ \hypertarget{index_license}{}\section{License}\label{index_license}
+Copyright (c) $<$2011$>$ $<$Levi (kloplop321.com)$>$
+
+This software is provided 'as-\/is', without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.
+
+2. Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
+
+3. This notice may not be removed or altered from any source distribution. 

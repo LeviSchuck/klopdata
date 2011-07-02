@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   data.cpp
  * Author: kloplop321
  * 
@@ -11,7 +11,7 @@ This software is provided 'as-is', without any express or implied
 warranty. In no event will the authors be held liable for any damages
 arising from the use of this software.
 
-Permission is granted to anyone to use this software for any purpose,
+Permission is granted to anyomakne to use this software for any purpose,
 including commercial applications, and to alter it and redistribute it
 freely, subject to the following restrictions:
 
@@ -95,9 +95,11 @@ namespace klop {
                 Iterator != data.myMap.end(); ++Iterator){
                     const Data* Object = Iterator->second;
                     /*printf("Copying object[%s,%d] with represented as: %s\n", 
-                            Iterator->first.c_str(),x, data.asString().c_str());//*/
+                            Iterator->first.c_str(),x, data.asString().c_str());
+                    //*/
                     Data* newData = new Data(Object);
-                    //printf("Old size: %lu; New size: %lu\n", Object->size(), newData->size());
+                    //printf("Old size: %lu; New size: %lu\n", Object->size(), 
+                    //          newData->size());
                     //printf("New type: %d\n", newData->myType);
                     this->addChild(Iterator->first, newData);
                     x++;
@@ -116,7 +118,6 @@ namespace klop {
         }
     }
     Data::Data(const Data* data){
-        //printf("Copying Data.\n");
         this->myType = data->myType;
         this->myArrayType = data->myArrayType;
         this->numericData = data->numericData;
@@ -129,11 +130,7 @@ namespace klop {
                 for(ObjectValues::const_iterator Iterator = data->myMap.begin(); 
                 Iterator != data->myMap.end(); ++Iterator){
                     const Data* Object = Iterator->second;
-                    /*printf("Copying object[%s,%d] with represented as: %s\n", 
-                            Iterator->first.c_str(),x, data->asString().c_str());//*/
                     Data* newData = new Data(Object);
-                    //printf("Old size: %lu; New size: %lu\n", Object->size(), newData->size());
-                    //printf("New type: %d\n", newData->myType);
                     this->addChild(Iterator->first, newData);
                     x++;
                 }
@@ -438,7 +435,8 @@ namespace klop {
     int Data::compare(const Data *data) const{
         if(data->isNumeric() && this->isNumeric()){
             //printf("We are numeric. %d vs %d \n",this->myType, data->myType);
-            //printf("We have values. %d vs %d \n",this->numericData.i, data->numericData.i);
+            //printf("We have values. %d vs %d \n",this->numericData.i, 
+            //          data->numericData.i);
             switch(data->myType){
                 case kinds::intData:{
                     /*printf("Comparing Data, %d - %d = %d\n",
@@ -477,7 +475,8 @@ namespace klop {
             return -1;//We can't compare.
         //So, only strings now.
         
-        if(data->myType == kinds::stringData){//we still want to be sure we don't have segfaults.
+        if(data->myType == kinds::stringData){//we still want to be sure we 
+            //don't have segfaults.
             return this->stringData.compare(data->stringData);
         }
         
@@ -648,7 +647,7 @@ namespace klop {
     unsigned long int Data::size() const{
         if(this->myArrayType == kinds::byAssociation){
             return this->myMap.size();
-        }else{//We only have 
+        }else{//We only have the list left
             return this->myList.size();
         }
     }
@@ -781,7 +780,8 @@ namespace klop {
     void Data::toList(){
         if(this->myType == kinds::moreData && 
                 this->myArrayType == kinds::byIndex){
-            return;//We already are a list. If you want to clear it, use clear...
+            return;
+            //We already are a list. If you want to clear it, use clear...
         }
         if(this->myType == kinds::moreData && 
                 this->myArrayType == kinds::byAssociation){
@@ -796,7 +796,8 @@ namespace klop {
     void Data::toAssoc(){
         if(this->myType == kinds::moreData && 
                 this->myArrayType == kinds::byAssociation){
-            return;//We already are a list. If you want to clear it, use clear...
+            return;
+            //We already are a list. If you want to clear it, use clear...
         }
         if(this->myType == kinds::moreData && 
                 this->myArrayType == kinds::byIndex){

@@ -1,0 +1,67 @@
+\hypertarget{data_8h}{
+\section{data.h File Reference}
+\label{data_8h}\index{data.h@{data.h}}
+}
+
+
+The header file that contains the \hyperlink{classklop_1_1Data}{klop::Data} class This header file describes the namespace of klop, \hyperlink{namespaceklop_1_1kinds}{klop::kinds}(which contains several enums) and the class \hyperlink{classklop_1_1Data}{klop::Data}.  
+
+
+{\ttfamily \#include $<$string$>$}\par
+{\ttfamily \#include $<$vector$>$}\par
+{\ttfamily \#include $<$map$>$}\par
+{\ttfamily \#include $<$cstring$>$}\par
+{\ttfamily \#include $<$list$>$}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classklop_1_1Data}{klop::Data}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classklop_1_1Data}{Data} is a node based information storage class which should be easily dumped to a file, or created from a file. \item\end{DoxyCompactList}\item 
+union {\bfseries klop::Data::numericalData}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespaceklop}{klop}
+
+
+\begin{DoxyCompactList}\small\item\em The klop namespace holds general things made by Kloplop321. \item\end{DoxyCompactList}
+
+\item 
+namespace \hyperlink{namespaceklop_1_1kinds}{klop::kinds}
+
+
+\begin{DoxyCompactList}\small\item\em the kinds namespace will hold enums to avoid name collision \item\end{DoxyCompactList}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespaceklop_1_1kinds_acddfa6fd45450d8db3eb8c288d03202b}{klop::kinds::DataType} \{ \par
+{\bfseries nullData} =  0, 
+{\bfseries intData}, 
+{\bfseries uintData}, 
+{\bfseries lintData}, 
+\par
+{\bfseries ulintData}, 
+{\bfseries doubleData}, 
+{\bfseries boolData}, 
+{\bfseries stringData}, 
+\par
+{\bfseries moreData}
+ \}
+\begin{DoxyCompactList}\small\item\em DataType is used to define the data within the \hyperlink{classklop_1_1Data}{klop::Data} class. \item\end{DoxyCompactList}\item 
+enum \hyperlink{namespaceklop_1_1kinds_aca835f7cfa300361cd67d6248b41ccd0}{klop::kinds::ArrayType} \{ {\bfseries byNothing} =  0, 
+{\bfseries byIndex}, 
+{\bfseries byAssociation}
+ \}
+\begin{DoxyCompactList}\small\item\em ArrayType is to specify if the Data object is associative or by index. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The header file that contains the \hyperlink{classklop_1_1Data}{klop::Data} class This header file describes the namespace of klop, \hyperlink{namespaceklop_1_1kinds}{klop::kinds}(which contains several enums) and the class \hyperlink{classklop_1_1Data}{klop::Data}. \begin{DoxyAuthor}{Author}
+Kloplop321 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+June 2011 
+\end{DoxyDate}
