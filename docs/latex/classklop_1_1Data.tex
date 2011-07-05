@@ -126,13 +126,9 @@ void \hyperlink{classklop_1_1Data_a1c3a4138959e444d9a652154e6c87eb5}{addChild} (
 \item 
 void \hyperlink{classklop_1_1Data_a3be6fccd807dc2a26690a911224fe363}{addChild} (std::string key, \hyperlink{classklop_1_1Data}{Data} $\ast$data)
 \item 
-void \hyperlink{classklop_1_1Data_a27792112ac7e77d53adbdee018709f5a}{addChild} (char $\ast$key, \hyperlink{classklop_1_1Data}{Data} $\ast$data)
-\item 
 void \hyperlink{classklop_1_1Data_a4b5a9f41274ce996455123a8a708c6c5}{addChild} (const \hyperlink{classklop_1_1Data}{Data} \&data)
 \item 
 void \hyperlink{classklop_1_1Data_ada55852e13a3cff79b078bd8ee13d050}{addChild} (std::string, const \hyperlink{classklop_1_1Data}{Data} \&data)
-\item 
-void \hyperlink{classklop_1_1Data_ad88ef4807f08f54747a17618ae867c6e}{addChild} (char $\ast$, const \hyperlink{classklop_1_1Data}{Data} \&data)
 \item 
 void \hyperlink{classklop_1_1Data_ae7a3793820ae499d010cf7dafcea3a66}{toList} ()
 \item 
@@ -145,6 +141,14 @@ void \hyperlink{classklop_1_1Data_a4a8acdc0100edfdaa90612ad1745c2ee}{toAssoc} ()
 \hyperlink{classklop_1_1Data_ae1c3cec24a9d3a5cd53693f5d34195f2}{map\_\-iterator} \hyperlink{classklop_1_1Data_aeb6daca6708978a23903d5200293b915}{map\_\-begin} ()
 \item 
 \hyperlink{classklop_1_1Data_ae1c3cec24a9d3a5cd53693f5d34195f2}{map\_\-iterator} \hyperlink{classklop_1_1Data_abfe383165bdecf91c2e88f766f62e1d1}{map\_\-end} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classklop_1_1Data_ad02dbbe8a693b53850cb0cf2eda868da}{
+class {\bfseries dataRW}}
+\label{classklop_1_1Data_ad02dbbe8a693b53850cb0cf2eda868da}
+
 \end{DoxyCompactItemize}
 
 
@@ -318,24 +322,6 @@ Adds a child to the \hyperlink{classklop_1_1Data}{Data} if it is set to an Assoc
 \begin{DoxyNote}{Note}
 Will have an assertion failure if it is not set to an associative mode 
 \end{DoxyNote}
-\hypertarget{classklop_1_1Data_a27792112ac7e77d53adbdee018709f5a}{
-\index{klop::Data@{klop::Data}!addChild@{addChild}}
-\index{addChild@{addChild}!klop::Data@{klop::Data}}
-\subsubsection[{addChild}]{\setlength{\rightskip}{0pt plus 5cm}void klop::Data::addChild (
-\begin{DoxyParamCaption}
-\item[{char $\ast$}]{ key, }
-\item[{{\bf Data} $\ast$}]{ data}
-\end{DoxyParamCaption}
-)}}
-\label{classklop_1_1Data_a27792112ac7e77d53adbdee018709f5a}
-Adds a child to the \hyperlink{classklop_1_1Data}{Data} if it is set to an Associative array
-
-
-\begin{DoxyParams}{Parameters}
-\item[{\em key}]the key by which it can later be retrieved by \item[{\em data}]The child to add \end{DoxyParams}
-\begin{DoxyNote}{Note}
-Will have an assertion failure if it is not set to an associative mode 
-\end{DoxyNote}
 \hypertarget{classklop_1_1Data_a4b5a9f41274ce996455123a8a708c6c5}{
 \index{klop::Data@{klop::Data}!addChild@{addChild}}
 \index{addChild@{addChild}!klop::Data@{klop::Data}}
@@ -345,13 +331,13 @@ Will have an assertion failure if it is not set to an associative mode
 \end{DoxyParamCaption}
 )}}
 \label{classklop_1_1Data_a4b5a9f41274ce996455123a8a708c6c5}
-Adds a child if the \hyperlink{classklop_1_1Data}{Data} is set to a list.
+Adds a child to the \hyperlink{classklop_1_1Data}{Data} if it is set to an Associative array
 
 
 \begin{DoxyParams}{Parameters}
-\item[{\em data}]the child to add \end{DoxyParams}
+\item[{\em data}]The child to add \end{DoxyParams}
 \begin{DoxyNote}{Note}
-Will have an assertion failure if this is not set to list mode. 
+Will have an assertion failure if it is not set to list mode 
 \end{DoxyNote}
 \hypertarget{classklop_1_1Data_ada55852e13a3cff79b078bd8ee13d050}{
 \index{klop::Data@{klop::Data}!addChild@{addChild}}
@@ -369,25 +355,7 @@ Adds a child to the \hyperlink{classklop_1_1Data}{Data} if it is set to an Assoc
 \begin{DoxyParams}{Parameters}
 \item[{\em key}]the key by which it can later be retrieved by \item[{\em data}]The child to add \end{DoxyParams}
 \begin{DoxyNote}{Note}
-Will have an assertion failure if it is not set to an associative mode 
-\end{DoxyNote}
-\hypertarget{classklop_1_1Data_ad88ef4807f08f54747a17618ae867c6e}{
-\index{klop::Data@{klop::Data}!addChild@{addChild}}
-\index{addChild@{addChild}!klop::Data@{klop::Data}}
-\subsubsection[{addChild}]{\setlength{\rightskip}{0pt plus 5cm}void klop::Data::addChild (
-\begin{DoxyParamCaption}
-\item[{char $\ast$}]{ key, }
-\item[{const {\bf Data} \&}]{ data}
-\end{DoxyParamCaption}
-)}}
-\label{classklop_1_1Data_ad88ef4807f08f54747a17618ae867c6e}
-Adds a child to the \hyperlink{classklop_1_1Data}{Data} if it is set to an Associative array
-
-
-\begin{DoxyParams}{Parameters}
-\item[{\em key}]the key by which it can later be retrieved by \item[{\em data}]The child to add \end{DoxyParams}
-\begin{DoxyNote}{Note}
-Will have an assertion failure if it is not set to an associative mode 
+Will have an assertion failure if it is not set to list 
 \end{DoxyNote}
 \hypertarget{classklop_1_1Data_aa38d008dbf5d8060745c790d3506944b}{
 \index{klop::Data@{klop::Data}!arrayType@{arrayType}}
@@ -889,7 +857,7 @@ unsigned long int how many items are in the array
 )}}
 \label{classklop_1_1Data_a4a8acdc0100edfdaa90612ad1745c2ee}
 Converts this data structure to an associative array. It will reset the data if any exist. \begin{DoxyNote}{Note}
-if it is already a list, then this will do nothing. You must use clear if you wish to have a clean list. 
+if it is already a list, then this will do nothing. You must use clear if you wish to have a clean map. 
 \end{DoxyNote}
 \hypertarget{classklop_1_1Data_ae7a3793820ae499d010cf7dafcea3a66}{
 \index{klop::Data@{klop::Data}!toList@{toList}}
@@ -900,7 +868,7 @@ if it is already a list, then this will do nothing. You must use clear if you wi
 \end{DoxyParamCaption}
 )}}
 \label{classklop_1_1Data_ae7a3793820ae499d010cf7dafcea3a66}
-Converts this data structure to a List. It will reset the data if any other kinds exist, such as kinds::stringData. \begin{DoxyNote}{Note}
+Converts this data structure to an indexed array. It will reset the data if any exist. \begin{DoxyNote}{Note}
 if it is already a list, then this will do nothing. You must use clear if you wish to have a clean list. 
 \end{DoxyNote}
 

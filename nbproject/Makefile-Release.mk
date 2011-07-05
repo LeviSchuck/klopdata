@@ -61,13 +61,13 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-Release.mk dist/Release/GNU-Linux-x86/libklopdata.a
+	"${MAKE}"  -f nbproject/Makefile-Release.mk dist/Release/GNU-Linux-x86/libdata.a
 
-dist/Release/GNU-Linux-x86/libklopdata.a: ${OBJECTFILES}
+dist/Release/GNU-Linux-x86/libdata.a: ${OBJECTFILES}
 	${MKDIR} -p dist/Release/GNU-Linux-x86
-	${RM} dist/Release/GNU-Linux-x86/libklopdata.a
-	${AR} -rv ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libklopdata.a ${OBJECTFILES} 
-	$(RANLIB) dist/Release/GNU-Linux-x86/libklopdata.a
+	${RM} dist/Release/GNU-Linux-x86/libdata.a
+	${AR} -rv ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libdata.a ${OBJECTFILES} 
+	$(RANLIB) dist/Release/GNU-Linux-x86/libdata.a
 
 ${OBJECTDIR}/data.o: data.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -81,19 +81,19 @@ ${OBJECTDIR}/data.o: data.cpp
 .build-tests-conf: .build-conf ${TESTFILES}
 ${TESTDIR}/TestFiles/f1: ${TESTDIR}/tests/mainDataTest.o ${TESTDIR}/tests/mainDataTestRunner.o ${OBJECTFILES:%.o=%_nomain.o}
 	${MKDIR} -p ${TESTDIR}/TestFiles
-	${LINK.cc} -o ${TESTDIR}/TestFiles/f1 $^ ${LDLIBSOPTIONS} 
+	${LINK.cc} -o ${TESTDIR}/TestFiles/f1 $^ ${LDLIBSOPTIONS} -lcppunit 
 
 
 ${TESTDIR}/tests/mainDataTest.o: tests/mainDataTest.cpp 
 	${MKDIR} -p ${TESTDIR}/tests
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -I. -MMD -MP -MF $@.d -o ${TESTDIR}/tests/mainDataTest.o tests/mainDataTest.cpp
+	$(COMPILE.cc) -O2 -I. -I. -MMD -MP -MF $@.d -o ${TESTDIR}/tests/mainDataTest.o tests/mainDataTest.cpp
 
 
 ${TESTDIR}/tests/mainDataTestRunner.o: tests/mainDataTestRunner.cpp 
 	${MKDIR} -p ${TESTDIR}/tests
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -I. -MMD -MP -MF $@.d -o ${TESTDIR}/tests/mainDataTestRunner.o tests/mainDataTestRunner.cpp
+	$(COMPILE.cc) -O2 -I. -I. -MMD -MP -MF $@.d -o ${TESTDIR}/tests/mainDataTestRunner.o tests/mainDataTestRunner.cpp
 
 
 ${OBJECTDIR}/data_nomain.o: ${OBJECTDIR}/data.o data.cpp 
@@ -121,7 +121,7 @@ ${OBJECTDIR}/data_nomain.o: ${OBJECTDIR}/data.o data.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r build/Release
-	${RM} dist/Release/GNU-Linux-x86/libklopdata.a
+	${RM} dist/Release/GNU-Linux-x86/libdata.a
 
 # Subprojects
 .clean-subprojects:

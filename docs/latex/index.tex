@@ -10,14 +10,14 @@ Using a list:
 \end{DoxyCode}
  Using keys 
 \begin{DoxyCode}
- klop::Data data;//Note: Do not use () if you plan to init with null data
+ klop::Data data;
  data.toAssoc();
  data.addChild("F2",klop::Data(42));
  printf("Forty Two is %d\n",data["F2"].asInt());
 \end{DoxyCode}
  Compounding nodes 
 \begin{DoxyCode}
- klop::Data data;//Note: Do not use () if you plan to init with null data
+ klop::Data data;
  data.toAssoc();
  klop::Data data2;
  data2.toList();

@@ -58,12 +58,12 @@ Example</h3>
  data.<a class="code" href="classklop_1_1Data.html#a1c3a4138959e444d9a652154e6c87eb5">addChild</a>(<a class="code" href="classklop_1_1Data.html" title="Data is a node based information storage class which should be easily dumped to a file...">klop::Data</a>(42));
  printf(<span class="stringliteral">&quot;Forty Two is %d\n&quot;</span>,data[0].asInt());
 </pre></div><p> Using keys </p>
-<div class="fragment"><pre class="fragment"> <a class="code" href="classklop_1_1Data.html" title="Data is a node based information storage class which should be easily dumped to a file...">klop::Data</a> data;<span class="comment">//Note: Do not use () if you plan to init with null data</span>
+<div class="fragment"><pre class="fragment"> <a class="code" href="classklop_1_1Data.html" title="Data is a node based information storage class which should be easily dumped to a file...">klop::Data</a> data;
  data.<a class="code" href="classklop_1_1Data.html#a4a8acdc0100edfdaa90612ad1745c2ee">toAssoc</a>();
  data.<a class="code" href="classklop_1_1Data.html#a1c3a4138959e444d9a652154e6c87eb5">addChild</a>(<span class="stringliteral">&quot;F2&quot;</span>,<a class="code" href="classklop_1_1Data.html" title="Data is a node based information storage class which should be easily dumped to a file...">klop::Data</a>(42));
  printf(<span class="stringliteral">&quot;Forty Two is %d\n&quot;</span>,data[<span class="stringliteral">&quot;F2&quot;</span>].asInt());
 </pre></div><p> Compounding nodes </p>
-<div class="fragment"><pre class="fragment"> <a class="code" href="classklop_1_1Data.html" title="Data is a node based information storage class which should be easily dumped to a file...">klop::Data</a> data;<span class="comment">//Note: Do not use () if you plan to init with null data</span>
+<div class="fragment"><pre class="fragment"> <a class="code" href="classklop_1_1Data.html" title="Data is a node based information storage class which should be easily dumped to a file...">klop::Data</a> data;
  data.<a class="code" href="classklop_1_1Data.html#a4a8acdc0100edfdaa90612ad1745c2ee">toAssoc</a>();
  <a class="code" href="classklop_1_1Data.html" title="Data is a node based information storage class which should be easily dumped to a file...">klop::Data</a> data2;
  data2.<a class="code" href="classklop_1_1Data.html#ae7a3793820ae499d010cf7dafcea3a66">toList</a>();
@@ -95,7 +95,7 @@ License</h2>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Jul 2 2011 17:43:06 for klopdata by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Jul 5 2011 17:38:43 for klopdata by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

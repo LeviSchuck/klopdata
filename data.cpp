@@ -756,10 +756,6 @@ namespace klop {
                 this->myArrayType == kinds::byAssociation);
         this->myMap.insert(std::pair<std::string, Data*>(key,data));
     }
-    void Data::addChild(char* key, Data* data){
-        const std::string skey = std::string(key);
-        addChild(skey, data);
-    }
     void Data::addChild(Data* data){
         this->addChild(this->size(), data);  
     }
@@ -768,10 +764,6 @@ namespace klop {
                 this->myArrayType == kinds::byAssociation);
         Data* newData = new Data(data);
         this->myMap.insert(std::pair<std::string, Data*>(key,newData));
-    }
-    void Data::addChild(char* key,const Data& data){
-        const std::string skey = std::string(key);
-        addChild(skey, data);
     }
     void Data::addChild(const Data& data){
         Data* newData = new Data(data);

@@ -111,6 +111,7 @@ namespace klop {
             byAssociation//Not an array
         };
     }
+    class dataRW;//This is put here so we can be friendly later.
     /*! \class Data
      * \brief Data is a node based information storage class which should be 
      * easily dumped to a file, or created from a file
@@ -377,44 +378,27 @@ namespace klop {
         void addChild(std::string key, Data* data);
         /*! Adds a child to the Data if it is set to an Associative array
          * 
-         * \param key the key by which it can later be retrieved by
          * \param data The child to add
-         * \note Will have an assertion failure if it is not set to an
-         * associative mode
-         */
-        void addChild(char* key, Data* data);
-        /*! Adds a child if the Data is set to a list.
-         * 
-         * \param data the child to add
-         * \note Will have an assertion failure if this is not set to list mode.
+         * \note Will have an assertion failure if it is not set to list mode
          */
         void addChild(const Data& data);
         /*! Adds a child to the Data if it is set to an Associative array
          * 
          * \param key the key by which it can later be retrieved by
          * \param data The child to add
-         * \note Will have an assertion failure if it is not set to an
-         * associative mode
+         * \note Will have an assertion failure if it is not set to list
          */
         void addChild(std::string,const Data& data);
-        /*! Adds a child to the Data if it is set to an Associative array
-         * 
-         * \param key the key by which it can later be retrieved by
-         * \param data The child to add
-         * \note Will have an assertion failure if it is not set to an
-         * associative mode
-         */
-        void addChild(char*,const Data& data);
-        /*! Converts this data structure to a List. It will reset the data if
-         * any other kinds exist, such as kinds::stringData.
-         * \note if it is already a list, then this will do nothing. You must 
-         * use clear if you wish to have a clean list.
-         */
+        /*! Converts this data structure to an indexed array. 
+          * It will reset the data if any exist.
+          * \note if it is already a list, then this will do nothing. You must 
+          * use clear if you wish to have a clean list.
+          */
         void toList();//Convert so we are moreData and byIndex
          /*! Converts this data structure to an associative array. 
           * It will reset the data if any exist.
           * \note if it is already a list, then this will do nothing. You must 
-          * use clear if you wish to have a clean list.
+          * use clear if you wish to have a clean map.
           */
         void toAssoc();//Convert so we are moreData and 
         /*!
@@ -443,13 +427,14 @@ namespace klop {
          * <= map end.
          */
         map_iterator map_end();
+        
         //map_const_iterator map_const_begin();
         //map_const_iterator map_const_end();
         
         
         virtual ~Data();
         //void testSelf();
-        
+        friend class dataRW;
     private:
         void addChild(unsigned long int index, Data* data);
         kinds::DataType myType;

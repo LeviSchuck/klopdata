@@ -56,7 +56,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#friends">Friends</a>  </div>
   <div class="headertitle">
 <h1>klop::Data Class Reference</h1>  </div>
 </div>
@@ -131,16 +132,18 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classklop_1_1Data.html#a49da2dac32757f1133a51a405a281dd8">reset</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classklop_1_1Data.html#a1c3a4138959e444d9a652154e6c87eb5">addChild</a> (<a class="el" href="classklop_1_1Data.html">Data</a> *data)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classklop_1_1Data.html#a3be6fccd807dc2a26690a911224fe363">addChild</a> (std::string key, <a class="el" href="classklop_1_1Data.html">Data</a> *data)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classklop_1_1Data.html#a27792112ac7e77d53adbdee018709f5a">addChild</a> (char *key, <a class="el" href="classklop_1_1Data.html">Data</a> *data)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classklop_1_1Data.html#a4b5a9f41274ce996455123a8a708c6c5">addChild</a> (const <a class="el" href="classklop_1_1Data.html">Data</a> &amp;data)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classklop_1_1Data.html#ada55852e13a3cff79b078bd8ee13d050">addChild</a> (std::string, const <a class="el" href="classklop_1_1Data.html">Data</a> &amp;data)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classklop_1_1Data.html#ad88ef4807f08f54747a17618ae867c6e">addChild</a> (char *, const <a class="el" href="classklop_1_1Data.html">Data</a> &amp;data)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classklop_1_1Data.html#ae7a3793820ae499d010cf7dafcea3a66">toList</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classklop_1_1Data.html#a4a8acdc0100edfdaa90612ad1745c2ee">toAssoc</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classklop_1_1Data.html#a8bcb1ee1639616047953b2459319ea3c">list_iterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classklop_1_1Data.html#a1f315f65d1aa487da0d41ce7036013ed">list_begin</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classklop_1_1Data.html#a8bcb1ee1639616047953b2459319ea3c">list_iterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classklop_1_1Data.html#af807d06d9aa338e2831b7cd1e254ea51">list_end</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classklop_1_1Data.html#ae1c3cec24a9d3a5cd53693f5d34195f2">map_iterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classklop_1_1Data.html#aeb6daca6708978a23903d5200293b915">map_begin</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classklop_1_1Data.html#ae1c3cec24a9d3a5cd53693f5d34195f2">map_iterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classklop_1_1Data.html#abfe383165bdecf91c2e88f766f62e1d1">map_end</a> ()</td></tr>
+<tr><td colspan="2"><h2><a name="friends"></a>
+Friends</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad02dbbe8a693b53850cb0cf2eda868da"></a><!-- doxytag: member="klop::Data::dataRW" ref="ad02dbbe8a693b53850cb0cf2eda868da" args="" -->
+class&nbsp;</td><td class="memItemRight" valign="bottom"><b>dataRW</b></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p><a class="el" href="classklop_1_1Data.html" title="Data is a node based information storage class which should be easily dumped to a file...">Data</a> is a node based information storage class which should be easily dumped to a file, or created from a file. </p>
@@ -476,42 +479,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a27792112ac7e77d53adbdee018709f5a"></a><!-- doxytag: member="klop::Data::addChild" ref="a27792112ac7e77d53adbdee018709f5a" args="(char *key, Data *data)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void klop::Data::addChild </td>
-          <td>(</td>
-          <td class="paramtype">char *&nbsp;</td>
-          <td class="paramname"> <em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classklop_1_1Data.html">Data</a> *&nbsp;</td>
-          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Adds a child to the <a class="el" href="classklop_1_1Data.html" title="Data is a node based information storage class which should be easily dumped to a file...">Data</a> if it is set to an Associative array</p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>the key by which it can later be retrieved by </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>The child to add </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="note"><dt><b>Note:</b></dt><dd>Will have an assertion failure if it is not set to an associative mode </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="a4b5a9f41274ce996455123a8a708c6c5"></a><!-- doxytag: member="klop::Data::addChild" ref="a4b5a9f41274ce996455123a8a708c6c5" args="(const Data &amp;data)" -->
 <div class="memitem">
 <div class="memproto">
@@ -527,14 +494,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Adds a child if the <a class="el" href="classklop_1_1Data.html" title="Data is a node based information storage class which should be easily dumped to a file...">Data</a> is set to a list.</p>
+<p>Adds a child to the <a class="el" href="classklop_1_1Data.html" title="Data is a node based information storage class which should be easily dumped to a file...">Data</a> if it is set to an Associative array</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>the child to add </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>The child to add </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="note"><dt><b>Note:</b></dt><dd>Will have an assertion failure if this is not set to list mode. </dd></dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>Will have an assertion failure if it is not set to list mode </dd></dl>
 
 </div>
 </div>
@@ -570,43 +537,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="note"><dt><b>Note:</b></dt><dd>Will have an assertion failure if it is not set to an associative mode </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ad88ef4807f08f54747a17618ae867c6e"></a><!-- doxytag: member="klop::Data::addChild" ref="ad88ef4807f08f54747a17618ae867c6e" args="(char *, const Data &amp;data)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void klop::Data::addChild </td>
-          <td>(</td>
-          <td class="paramtype">char *&nbsp;</td>
-          <td class="paramname"> <em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classklop_1_1Data.html">Data</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Adds a child to the <a class="el" href="classklop_1_1Data.html" title="Data is a node based information storage class which should be easily dumped to a file...">Data</a> if it is set to an Associative array</p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>the key by which it can later be retrieved by </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>The child to add </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="note"><dt><b>Note:</b></dt><dd>Will have an assertion failure if it is not set to an associative mode </dd></dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>Will have an assertion failure if it is not set to list </dd></dl>
 
 </div>
 </div>
@@ -1369,7 +1300,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 <p>Converts this data structure to an associative array. It will reset the data if any exist. </p>
-<dl class="note"><dt><b>Note:</b></dt><dd>if it is already a list, then this will do nothing. You must use clear if you wish to have a clean list. </dd></dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>if it is already a list, then this will do nothing. You must use clear if you wish to have a clean map. </dd></dl>
 
 </div>
 </div>
@@ -1387,7 +1318,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Converts this data structure to a List. It will reset the data if any other kinds exist, such as kinds::stringData. </p>
+<p>Converts this data structure to an indexed array. It will reset the data if any exist. </p>
 <dl class="note"><dt><b>Note:</b></dt><dd>if it is already a list, then this will do nothing. You must use clear if you wish to have a clean list. </dd></dl>
 
 </div>
@@ -1411,7 +1342,7 @@ Public Member Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Jul 2 2011 17:43:06 for klopdata by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Tue Jul 5 2011 17:38:43 for klopdata by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
