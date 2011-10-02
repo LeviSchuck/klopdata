@@ -81,6 +81,7 @@ freely, subject to the following restrictions:
 #include <map>
 #include <cstring>
 #include <list>
+#include <cstdarg>
 
 /*! \brief The klop namespace holds general things made by Kloplop321
  */
@@ -141,6 +142,9 @@ namespace klop {
         /**Data::map_iterator is the type for the Data::ObjectValues iterator*/
         typedef ObjectValues::iterator map_iterator;
         //typedef ObjectValues::const_iterator map_const_iterator;
+	/** Generic string array for path use*/
+	typedef std::vector<std::string> path;
+	
         /**Holds null data. Suggested to use this and then convert to an array 
          * type*/
         Data();//This is null.
@@ -430,7 +434,13 @@ namespace klop {
         
         //map_const_iterator map_const_begin();
         //map_const_iterator map_const_end();
-        
+	/*!
+	 * \param dat The data to check against
+	 * \param path a list of strings, where could be used like
+	 * dat["t"]["a"]["b"], and the path is {"t","a","b"}
+	 * \return bool whether the path exists
+	 */
+        inline static bool path_exists(const Data& dat, const path path);
         
         virtual ~Data();
         //void testSelf();

@@ -827,7 +827,35 @@ namespace klop {
     Data::map_const_iterator Data::map_const_end(){
         return this->myMap.end();
     }*/
-    
+    /*bool Data::path_exists(const klop::Data& dat,std::string[] path) const{
+      bool does = true;
+      does = false;
+      return does;
+    }*/
+    bool Data::path_exists(const klop::Data& dat,const path path){
+      const int len = path.size();
+      if(len == 0)
+	return false;
+      Data da = dat;
+      int pos = 0;
+      while(true){
+	if(pos == len){
+	 return true;//we have hit the end 
+	 break;//possibly dead code
+	}
+	if(!da.isData())
+	  break;//And return false
+	if(da.isMember(path[pos])){
+	  pos++;
+	  da = da[path[pos]];//Now we can set the element
+	}else{
+	  break;//Not a member, thus break out, return false;
+	}
+      }
+      return false;
+    }
+
+
     Data::~Data() {
         this->clear();
         this->numericData.uli = 0;
